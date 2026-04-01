@@ -31,38 +31,13 @@
       line-height: 1.5;
       margin: 16px 0;
     }
-    .btn {
-      display: inline-block;
-      background: #1a5276;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 500;
-      margin-top: 8px;
-      transition: background 0.2s;
-    }
-    .btn:hover {
-      background: #0e3a5c;
-    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>✅ Email Verified!</h1>
     <p>Your email has been successfully verified.</p>
-    <p>You can now open the Kontri-Os app.</p>
-    <a id="openAppBtn" href="#" class="btn">Open App</a>
+    <p>You can now log in to Kontri-Os.</p>
   </div>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token');
-    const type = urlParams.get('type');
-    const redirectUrl = `com.kontrios://auth/callback?token=${token}&type=${type}`;
-    document.getElementById('openAppBtn').href = redirectUrl;
-    setTimeout(() => {
-      window.location.href = redirectUrl;
-    }, 2000);
-  </script>
 </body>
 </html>
